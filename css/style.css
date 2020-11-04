@@ -1,0 +1,70 @@
+/* test area */
+.debug {
+  background-color: red;
+}
+
+.debug aside {
+  background-color: yellow;
+  border: 2px solid black;
+}
+.debug section {
+  background-color: green;
+  border: 2px solid black;
+}
+.debug footer {
+  background-color: purple;
+  border: 2px solid black;
+}
+/* test area */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#page_container{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+/* main */
+main {
+  height: calc(100% - 100px);
+  display: flex;
+}
+/* aside */
+aside {
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+/* /aside */
+
+/* content section */
+section#content {
+  width: calc(100% - 200px);
+  height: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+}
+/* /content section */
+/* /main */
+
+/* footer */
+footer {
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/* footer */
+
+/* @media screen and (max-height: 100px) {
+  main {
+    visibility: hidden
+  }
+} */
