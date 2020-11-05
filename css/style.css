@@ -39,7 +39,6 @@ ul {
 }
 .flex_row {
   display: flex;
-  justify-content: space-between;
 }
 /* /utility */
 
@@ -159,7 +158,10 @@ section#content {
   background-color: #141922;
   padding-top: 100px;
   overflow-y: scroll;
+  color: white;
 }
+
+/* upgrade bar */
 #upgrade {
   display: flex;
   justify-content: flex-end;
@@ -170,6 +172,7 @@ section#content {
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 #upgrade a {
   padding: 15px 30px;
@@ -183,27 +186,33 @@ section#content {
   padding: 20px 35px;
   border-radius: 30px;
 }
+/* upgrade bar */
 
 /* playlist item */
+#content p {
+  color: #43474E;
+  padding: 10px 0;
+}
 .mini-container {
   height: 100%;
   position: relative;
   overflow-x: hidden;
+  margin: 30px 20px 50px 0;
+  text-align: center;
 }
 .mini-container > img {
- height: 150px;
-}
+ height: 200px;
+ }
 .play {
   color: white;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px);
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
 }
-
 .play span {
   position: absolute;
   top: 50%;
@@ -211,11 +220,23 @@ section#content {
   transform: translate(-50%, -50%);
   font-size: 60px;
 }
-
 .mini-container:hover .play {
   cursor: pointer;
   opacity: 1;
 }
+.description {
+  margin-top: 10px;
+  height: 20px;
+}
+
+/* artist album */
+#artist  .play {
+  border-radius: 50%;
+}
+#artist img {
+  border-radius: 50%;
+}
+/* /artist album */
 /* /playlist item */
 /* /content section */
 /* /main */
@@ -231,6 +252,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 3;
 }
 /* footer */
 
