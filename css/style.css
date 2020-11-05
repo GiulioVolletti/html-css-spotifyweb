@@ -39,6 +39,8 @@ ul {
 }
 .flex_row {
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 /* /utility */
 
@@ -196,8 +198,7 @@ section#content {
 .mini-container {
   height: 100%;
   position: relative;
-  overflow-x: hidden;
-  margin: 30px 20px 50px 0;
+  margin: 30px 10px 50px 0;
   text-align: center;
 }
 .mini-container > img {
@@ -253,6 +254,20 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 3;
+}
+.song {
+  width: 100%;
+  display: flex;
+}
+.song img {
+  width: 50px;
+}
+
+.center_player {
+  flex-grow: 2;
+}
+.end_player {
+ width: 100%;
 }
 /* footer */
 
