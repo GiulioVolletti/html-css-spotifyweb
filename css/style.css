@@ -23,6 +23,19 @@
   padding: 0;
 }
 
+/* utility */
+a {
+  color:#6A6A6A;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+}
+ul {
+  list-style: none;
+}
+/* /utility */
+
 #page_container{
   width: 100vw;
   height: 100vh;
@@ -34,46 +47,86 @@ main {
   display: flex;
 }
 /* nav */
-nav {
-  position: relative;
+#user-navbar {
   width: 200px;
   height: 100%;
-  padding: 20px;
   color: white;
   overflow: hidden;
   background-color: #000000;
 }
-nav > a {
+
+/* navbar top */
+.nav-top {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px);
+  overflow-y: hidden;
+  min-height: 250px;
+  padding: 20px;
+}
+.nav-logo{
+  margin-bottom: 20px;
+}
+.nav-logo > a {
   color: white;
-  text-decoration: none;
   font-size: 35px;
   font-weight: bold;
 }
-a > span {
+
+.nav-top a > span {
   font-size: 30px;
 }
 
+.nav-section li{
+  padding: 5px 0;
+}
+.nav-section i {
+  font-size: 25px;
+  margin-right: 5px;
+}
+/* /navbar top */
+
+/* playlists */
+.center-list {
+  padding: 20px 0;
+  overflow-y: hidden;
+}
+#playlists {
+  height: 70%;
+  overflow-y: auto;
+}
+#playlists li {
+  height: 20px;
+  line-height: 20px;
+}
+/* /playlists */
+
+/* user */
 .user {
+  padding: 0 20px;
   width: calc(100% - 40px);
-  position: absolute;
-  bottom:0;
+  height: 100px;
 }
-.user a {
-  color: white;
-  text-decoration: none;
-}
-h3 {
-  border-top: 1px solid white;
+.user h3 {
+  border-top: 1px solid #6A6A6A;
   margin:10px 0;
   padding-top: 10px;
 }
+.user a {
+  color:#6A6A6A;
+}
+.user i {
+  margin: 0 5px;
+  font-size: 15px
+}
 .fa-user {
+  color: white;
   padding: 5px;
   border-radius: 50%;
   margin-right: 5px;
   background-color: #808080;
-
 }
+/* /user */
 /* /nav */
 
 /* content section */
@@ -97,12 +150,15 @@ section#content {
 }
 #upgrade a {
   padding: 15px 30px;
-  text-decoration: none;
   text-transform: uppercase;
   color: #ECECED;
   border: 2px solid #ECECED;
   border-radius: 25px;
   margin-right: 20px;
+}
+#upgrade a:hover {
+  padding: 20px 35px;
+  border-radius: 30px;
 }
 /* /content section */
 /* /main */
@@ -112,6 +168,8 @@ footer {
   padding: 20px;
   width: 100%;
   height: 90px;
+  display: flex;
+  justify-content: space-between;
   background-color: #282828;
   position: fixed;
   bottom: 0;
@@ -121,16 +179,31 @@ footer {
 
 @media screen and (max-width: 767px) {
 
-  nav span {
+  .nav-logo a span {
     font-size: 0;
   }
-  nav {
-    width: 100px;
+  #user-navbar {
+    padding: 0;
+    width: 80px;
   }
   section#content {
     width: calc(100% - 100px);
   }
   #upgrade{
-    width: calc(100% - 100px);
+    width: calc(100% - 80px);
   }
+  .nav-section a {
+    font-size: 0;
+  }
+  .center-list {
+    display: none;
+  }
+  .user {
+    text-align: center;
+    font-size: 0;
+  }
+  .user h3{
+    border-top: 0;
+  }
+
 }
