@@ -155,7 +155,7 @@ main {
 }
 
 .user i {
-  margin: 0 5px;
+  margin-right: 5px;
   font-size: 15px
 }
 .fa-user {
@@ -352,6 +352,9 @@ footer {
 .top_center_player a:nth-child(3) {
   font-size: 25px;
 }
+.fa-play-circle:hover {
+  font-size: 30px;
+}
 /* player and volume line */
 .line-first-half ,
 .line-second-half {
@@ -437,7 +440,6 @@ footer {
     font-size: 0;
   }
   #user-navbar {
-    padding: 0;
     width: 80px;
   }
   section#content {
@@ -460,6 +462,10 @@ footer {
   .user h3{
     border-top: 0;
   }
+  .user .fa-arrow-alt-circle-down {
+    margin-left: 5px;
+  }
+
   .end_player{
     width: 200px;
   }
