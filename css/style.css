@@ -86,11 +86,27 @@ main {
 }
 
 .nav-section li{
-  padding: 5px 0;
+  vertical-align: middle;
+  height: 30px;
+  margin: 10px 0;
 }
 .nav-section i {
+  vertical-align: middle;
   font-size: 25px;
   margin-right: 5px;
+}
+#home a {
+  color: white
+}
+#home::before {
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-left: -20px;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #9DE82E;
+  display: inline-block;
 }
 /* /navbar top */
 
@@ -162,6 +178,28 @@ section#content {
   overflow-y: scroll;
   color: white;
 }
+/* content navbar */
+#content_navbar {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 30px 0;
+}
+#content_navbar li {
+  text-align: center;
+  display: inline-block;
+  padding-right: 20px;
+}
+#active::after {
+  content: "";
+  height: 2px;
+  width: 30%;
+  background-color: #9DE82E;
+  display: inline-block;
+}
+/* /content navbar */
 
 /* upgrade bar */
 #upgrade {
@@ -406,6 +444,7 @@ footer {
   #upgrade{
     width: calc(100% - 80px);
   }
+
   .nav-section a {
     font-size: 0;
   }
