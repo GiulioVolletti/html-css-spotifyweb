@@ -286,6 +286,7 @@ footer {
 
 /* center player */
 .center_player {
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   width: 40%;
