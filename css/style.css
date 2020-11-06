@@ -182,15 +182,17 @@ section#content {
 #content_navbar {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 #content_navbar li {
   text-align: center;
   display: inline-block;
-  padding-right: 20px;
+  padding-right: 30px;
+  margin-bottom: 20px;
 }
 #active::after {
   content: "";
@@ -457,6 +459,12 @@ footer {
   }
   .user h3{
     border-top: 0;
+  }
+  .end_player{
+    width: 200px;
+  }
+  .end_player > div:last-child {
+    width: 70%;
   }
 
 }
